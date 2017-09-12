@@ -14,6 +14,7 @@ namespace EpiserverSite1.Models.ViewModels
         public T CurrentPage { get; private set; }
         public LayoutModel Layout { get; set; }
         public IContent Section { get; set; }
+        public string Ip { get; set; }
     }
 
     public static class PageViewModel

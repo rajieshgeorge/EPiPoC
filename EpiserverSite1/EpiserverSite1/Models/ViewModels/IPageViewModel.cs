@@ -15,5 +15,7 @@ namespace EpiserverSite1.Models.ViewModels
         T CurrentPage { get; }
         LayoutModel Layout { get; set; }
         IContent Section { get; set; }
+
+        string Ip { get; set; }
     }
 }

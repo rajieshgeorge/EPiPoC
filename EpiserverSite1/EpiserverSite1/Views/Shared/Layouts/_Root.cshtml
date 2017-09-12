@@ -1,4 +1,4 @@
-@using System.Web.Optimization
+﻿@using System.Web.Optimization
 @using EPiServer.Framework.Web.Mvc.Html
 @using EpiserverSite1.Business
 @model IPageViewModel<SitePageData>
@@ -25,7 +25,9 @@
 
         @Html.RenderEPiServerQuickNavigator()
         @Html.FullRefreshPropertiesMetaData()
-        <div class="container">
+        
+        @Model.Ip
+    <div class="container">
             @if(!Model.Layout.HideHeader)
             {
                 Html.RenderPartial("Header", Model);

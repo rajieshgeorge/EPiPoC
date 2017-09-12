@@ -22,7 +22,12 @@ namespace EpiserverSite1.Controllers
                 editHints.AddConnection(m => m.Layout.NewsPages, p => p.NewsPageLinks);
                 editHints.AddConnection(m => m.Layout.CustomerZonePages, p => p.CustomerZonePageLinks);
             }
-
+            var str = "";
+            foreach (System.Net.IPAddress address in System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName()).AddressList)
+            {
+                str += address.ToString() + "-" + System.Net.IPAddress.IsLoopback(address).ToString() + "</br>";
+            }
+            model.Ip = str;
             return View(model);
         }
 
